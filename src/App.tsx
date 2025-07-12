@@ -1,8 +1,8 @@
 import React from 'react';
-import ImageCompressor from './components/ImageCompressor';
+import AppRouter from './components/Router';
 
 function App() {
-  return <ImageCompressor />;
+  return <AppRouter />;
 }
 
 export default App;

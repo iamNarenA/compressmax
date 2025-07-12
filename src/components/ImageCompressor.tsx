@@ -1,5 +1,10 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { Upload, Download, Image as ImageIcon, Trash2, Settings, CheckCircle, AlertCircle } from 'lucide-react';
+import AdBanner from './AdBanner';
+import PremiumUpgrade from './PremiumUpgrade';
+import AffiliateSection from './AffiliateSection';
+import SupportSection from './SupportSection';
+import Footer from './Footer';
 
 interface CompressedImage {
   id: string;
@@ -190,7 +195,8 @@ const ImageCompressor: React.FC = () => {
   const totalSavings = totalOriginalSize > 0 ? ((totalOriginalSize - totalCompressedSize) / totalOriginalSize) * 100 : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="py-8 px-4">
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
@@ -201,6 +207,9 @@ const ImageCompressor: React.FC = () => {
             Compress your images without losing quality. Fast, secure, and completely free.
           </p>
         </header>
+
+        {/* Top Banner Ad */}
+        <AdBanner size="leaderboard" className="mb-8" />
 
         {/* Upload Area */}
         <div
@@ -298,9 +307,25 @@ const ImageCompressor: React.FC = () => {
                 </div>
               </div>
             </div>
+            </div>
           </div>
         )}
 
+        {/* Show monetization sections even when images are present */}
+        {images.length > 0 && (
+          <div className="mt-16">
+            {/* Support Section */}
+            <SupportSection />
+            
+            {/* Banner Ad */}
+            <div className="flex justify-center mb-8">
+              <AdBanner size="banner" />
+            </div>
+            
+            {/* Premium Upgrade for existing users */}
+            <PremiumUpgrade />
+          </div>
+        )}
         {/* Images Grid */}
         {images.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -377,7 +402,22 @@ const ImageCompressor: React.FC = () => {
 
         {/* Features Section */}
         {images.length === 0 && (
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mt-16">
+            {/* Premium Upgrade Section */}
+            <PremiumUpgrade />
+            
+            {/* Support Section */}
+            <SupportSection />
+            
+            {/* Rectangle Ad */}
+            <div className="flex justify-center mb-12">
+              <AdBanner size="rectangle" />
+            </div>
+            
+            {/* Affiliate Tools Section */}
+            <AffiliateSection />
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">
               <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-2">No Quality Loss</h3>
@@ -402,6 +442,10 @@ const ImageCompressor: React.FC = () => {
           </div>
         )}
       </div>
+      </div>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
