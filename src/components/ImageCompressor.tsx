@@ -312,18 +312,20 @@ const ImageCompressor: React.FC = () => {
 
           {/* Show monetization sections even when images are present */}
           {images.length > 0 && (
-            <div className="mt-16">
-              {/* Support Section */}
-              <SupportSection />
-              
-              {/* Banner Ad */}
-              <div className="flex justify-center mb-8">
-                <AdBanner size="banner" />
+            <>
+              <div className="mt-16">
+                {/* Support Section */}
+                <SupportSection />
+                
+                {/* Banner Ad */}
+                <div className="flex justify-center mb-8">
+                  <AdBanner size="banner" />
+                </div>
+                
+                {/* Premium Upgrade for existing users */}
+                <PremiumUpgrade />
               </div>
-              
-              {/* Premium Upgrade for existing users */}
-              <PremiumUpgrade />
-            </div>
+            </>
           )}
 
           {/* Images Grid */}
@@ -402,45 +404,47 @@ const ImageCompressor: React.FC = () => {
 
           {/* Features Section */}
           {images.length === 0 && (
-            <div className="mt-16">
-              {/* Premium Upgrade Section */}
-              <PremiumUpgrade />
-              
-              {/* Support Section */}
-              <SupportSection />
-              
-              {/* Rectangle Ad */}
-              <div className="flex justify-center mb-12">
-                <AdBanner size="rectangle" />
+            <>
+              <div className="mt-16">
+                {/* Premium Upgrade Section */}
+                <PremiumUpgrade />
+                
+                {/* Support Section */}
+                <SupportSection />
+                
+                {/* Rectangle Ad */}
+                <div className="flex justify-center mb-12">
+                  <AdBanner size="rectangle" />
+                </div>
+                
+                {/* Affiliate Tools Section */}
+                <AffiliateSection />
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                  <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">No Quality Loss</h3>
+                    <p className="text-gray-600">
+                      Our advanced compression algorithms maintain image quality while reducing file size.
+                    </p>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <AlertCircle className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">100% Secure</h3>
+                    <p className="text-gray-600">
+                      All processing happens in your browser. Your images never leave your device.
+                    </p>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <Download className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Batch Processing</h3>
+                    <p className="text-gray-600">
+                      Compress multiple images at once and download them as a ZIP file.
+                    </p>
+                  </div>
+                </div>
               </div>
-              
-              {/* Affiliate Tools Section */}
-              <AffiliateSection />
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                  <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">No Quality Loss</h3>
-                  <p className="text-gray-600">
-                    Our advanced compression algorithms maintain image quality while reducing file size.
-                  </p>
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                  <AlertCircle className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">100% Secure</h3>
-                  <p className="text-gray-600">
-                    All processing happens in your browser. Your images never leave your device.
-                  </p>
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                  <Download className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Batch Processing</h3>
-                  <p className="text-gray-600">
-                    Compress multiple images at once and download them as a ZIP file.
-                  </p>
-                </div>
-              </div>
-            </div>
+            </>
           )}
         </div>
       </div>
