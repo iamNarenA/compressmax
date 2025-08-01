@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { Upload, Download, Image as ImageIcon, Trash2, Settings, CheckCircle, AlertCircle } from 'lucide-react';
 import AdBanner from './AdBanner';
-import PremiumUpgrade from './PremiumUpgrade';
 import AffiliateSection from './AffiliateSection';
 import SupportSection from './SupportSection';
 import Footer from './Footer';
@@ -321,9 +320,6 @@ const ImageCompressor: React.FC = () => {
                 <div className="flex justify-center mb-8">
                   <AdBanner size="banner" />
                 </div>
-                
-                {/* Premium Upgrade for existing users */}
-                <PremiumUpgrade />
               </div>
             </>
           )}
@@ -406,9 +402,6 @@ const ImageCompressor: React.FC = () => {
           {images.length === 0 && (
             <>
               <div className="mt-16">
-                {/* Premium Upgrade Section */}
-                <PremiumUpgrade />
-                
                 {/* Support Section */}
                 <SupportSection />
                 
