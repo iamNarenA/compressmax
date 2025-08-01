@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { Upload, Download, Image as ImageIcon, Trash2, Settings, CheckCircle, AlertCircle } from 'lucide-react';
 import AdBanner from './AdBanner';
-import AffiliateSection from './AffiliateSection';
 import SupportSection from './SupportSection';
 import Footer from './Footer';
 
@@ -409,9 +408,6 @@ const ImageCompressor: React.FC = () => {
                 <div className="flex justify-center mb-12">
                   <AdBanner size="rectangle" />
                 </div>
-                
-                {/* Affiliate Tools Section */}
-                <AffiliateSection />
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                   <div className="bg-white rounded-xl p-6 shadow-lg text-center">
