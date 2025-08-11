@@ -1,6 +1,6 @@
-# EduKids Pro - Educational Platform
+# EduKidz - Interactive Educational Platform
 
-A comprehensive educational platform inspired by LogIQids, featuring interactive worksheets and educational games for children aged 3-12.
+A comprehensive educational platform featuring interactive worksheets and educational games for children aged 3-12.
 
 ## 🌟 Features
 
@@ -150,11 +150,11 @@ A comprehensive educational platform inspired by LogIQids, featuring interactive
 ## 🛠️ Installation & Setup
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/edukids-pro.git
+# Clone the Edukidz repository
+git clone https://github.com/iamNarenA/EduKidz.git
 
 # Navigate to project directory
-cd edukids-pro
+cd EduKidz
 
 # Install dependencies
 npm install
@@ -282,7 +282,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- Inspired by LogIQids educational platform
 - Icons by Lucide React
 - Fonts by Google Fonts
 - Images by Pexels
@@ -291,10 +290,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Support
 
 For support, questions, or feedback:
-- Email: support@edukidspro.com
-- GitHub Issues: [Create an issue](https://github.com/yourusername/edukids-pro/issues)
-- Documentation: [View docs](https://edukidspro.com/docs)
+- Email: support@edukidz.com
+- GitHub Issues: [Create an issue](https://github.com/iamNarenA/EduKidz/issues)
+- Documentation: [View docs](https://edukidz.com/docs)
 
 ---
 
-**EduKids Pro** - Making learning fun, engaging, and accessible for every child! 🌟
+**EduKidz** - Making learning fun, engaging, and accessible for every child! 🌟

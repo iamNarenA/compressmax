@@ -1,13 +1,36 @@
 {
-  "name": "logiqids-clone",
+  "name": "edukidz",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Interactive educational platform for children aged 3-12 with worksheets, games, and progress tracking",
+  "keywords": [
+    "education",
+    "kids",
+    "learning",
+    "worksheets",
+    "games",
+    "interactive",
+    "children",
+    "react",
+    "typescript"
+  ],
+  "author": "EduKidz Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamNarenA/EduKidz.git"
+  },
+  "homepage": "https://github.com/iamNarenA/EduKidz#readme",
+  "bugs": {
+    "url": "https://github.com/iamNarenA/EduKidz/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^18.3.1",
